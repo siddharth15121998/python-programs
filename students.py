@@ -1,0 +1,9 @@
+data=[{"name":"Siddharth","Rollnum":1001,"adminnum":3005,"college":"svn","marks":{"eng":50,"maths":49,"science":45}},
+{"name":"akash","Rollnum":1003,"adminnum":3006,"college":"svn","marks":{"eng":39,"maths":51,"science":46}},
+{"name":"harsh","Rollnum":1005,"adminnum":3007,"college":"svn","marks":{"eng":47,"maths":55,"science":45}},
+{"name":"rita","Rollnum":1006,"adminnum":3008,"college":"svn","marks":{"eng":50,"maths":35,"science":25}}]
+print(data)
+#print(len(data))
+#print(data[0].keys())
+#print(data[0].values())
+#print(data[0]["name"])
