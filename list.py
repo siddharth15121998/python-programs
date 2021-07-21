@@ -10,4 +10,5 @@ identi=["abc"]
 #print(max(names))
 # print(tuple(names))
 names.append("sid")
+names.sort(reverse=True)
 print(names)
