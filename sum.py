@@ -1,4 +1,7 @@
-num1=10
-num2=20
-sum=num1+num2
-print(sum)
+
+def addNumbers(a,b):
+    return a+b
+
+n1=int(input("enter first number: "))
+n2=int(input("enter second number: "))
+print(addNumbers(n1,n2))
