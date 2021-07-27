@@ -14,8 +14,12 @@ class Calculator(AdditionOperation,SubtractioOperation,MultiplicationOperation):
     pass
 
 objcalc=Calculator()
-n1=int(input("enter a number:"))
-n2=int(input("enter second number:"))
-print(objcalc.MultiTwoNum(n1,n2))
-print(objcalc.addTwoNum(n1,n2))
-print(objcalc.subTwoNum(n1,n2))
+# n1=int(input("enter a number:"))
+# n2=int(input("enter second number:"))
+# print(objcalc.MultiTwoNum(n1,n2))
+# print(objcalc.addTwoNum(n1,n2))
+# print(objcalc.subTwoNum(n1,n2))
+#print(issubclass(Calculator,MultiplicationOperation))
+print(issubclass(Calculator,SubtractioOperation))
+#print(issubclass(SubtractioOperation,AdditionOperation))
+
