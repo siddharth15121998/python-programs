@@ -1,9 +1,25 @@
 import re
-name=input("Enter your name: ")
+first_name=input("Enter your first name: ")
+last_name=input("enter your last name: ")
 mobile_num=input("Enter your mobile number: ")
 address=input("Enter your address: ")
 pincode=input("Enter your pincode: ")
 email_id=input("Enter your emailid: ")
+
+def isvalidfirst(first_name):
+    valfirst=re.match(r'^(Mr\.|Mrs\.|Ms\.|mr\.|mrs\.|ms\.) ([a-z]+)( [a-z]+)*( [a-z]+)*$',first_name)
+    
+    if (valfirst):
+        return True
+    else:
+        return False
+
+def isvalidlast(last_name):
+    vallast=re.match(r'^([a-z]+)( [a-z]+)*( [a-z]+)*$',last_name)
+    if (vallast):
+        return True
+    else:
+        return False
 
 def isvalid(mobile_num):
     r=re.match("(0|91)?[-\s]?[6-9]\d{9}",mobile_num)
@@ -32,11 +48,13 @@ def validatepincode(pincode):
 a=isvalid(mobile_num)
 b=validateemail(email_id)
 c=validatepincode(pincode)
+d=isvalidfirst(first_name)
+e=isvalidlast(last_name)
 
 
-if a and b and c==True:
+if a and b and c and d and e ==True:
     print("All in correct format")
-    print(name)
+    print(first_name,last_name)
     print(mobile_num)
     print(address)
     print(pincode)
@@ -48,4 +66,11 @@ else:
         print("enter email in CORRECT format")
     if c != True:
         print("enter pincode in CORRECT format")
+    if d != True:
+        print("enter first name in CORRECT format")
+
+    if e != True:
+        print("enter last name in CORRECT format")
+
+
 
