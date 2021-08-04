@@ -24,7 +24,11 @@ while(True):
     print("3. search product by name")
     print("4. product which expire today")
     print("5. exit")
-    choice=int(input("Enter your choice: "))
+    try:
+        choice=int(input("Enter your choice: "))
+    except ValueError:
+        continue
+    
     if choice==1:
         while(True):
             proname=input("enter product name: ")

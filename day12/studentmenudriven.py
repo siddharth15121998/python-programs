@@ -12,9 +12,6 @@ class marks:
         hindi=0
         maths=0
         science=0
-    
-
-   
 class studentdetails(Student,marks):
     def addstudentdetails(self,name,rollnum,adminnum,eng,hindi,maths,science):
         total=eng+hindi+maths+science
@@ -22,8 +19,6 @@ class studentdetails(Student,marks):
         dict1={"name":name,"rollnum":rollnum,"adminnum":adminnum,"eng":eng,"hindi":hindi,"maths":maths,"science":science,"total":total,"addedon":current_local_time}
         studentlist.append(dict1)
 obj1=studentdetails()
-
-
 def validation_name(name,roll):
     val=re.match("([a-z]+)([a-z]+)([a-z]+)$",name)
     val2=re.match("[0-9]{0,7}$",roll)
@@ -31,16 +26,16 @@ def validation_name(name,roll):
         return True
     else:
         return False
-
-
 while(True):
     print("1. Add Students:")
     print("2. display student details: ")
     print("3. search student using roll number")
     print("4. Ranking")
     print("5. exit")
-    choice=int(input("enter your choice: "))
-    
+    try:
+        choice=int(input("enter your choice: "))
+    except ValueError:
+        continue
     if choice==1:
         while(True):
             name=input("Enter your name: ")
